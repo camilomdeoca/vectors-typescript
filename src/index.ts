@@ -19,22 +19,22 @@ export class Vector2 {
     return new Vector2(this.x / norm, this.y / norm);
   }
 
-  public dot(v: Vector2): number
+  public static dot(v1: Vector2, v2: Vector2): number
   {
-    return this.x * v.x + this.y * v.y;
+    return v1.x * v2.x + v1.y * v2.y;
   }
 
-  public add(v: Vector2): Vector2
+  public static add(v1: Vector2, v2: Vector2): Vector2
   {
-    return new Vector2(this.x + v.x, this.y + v.y);
+    return new Vector2(v1.x + v2.x, v1.y + v2.y);
   }
 
-  public subtract(v: Vector2): Vector2
+  public subtract(v1: Vector2, v2: Vector2): Vector2
   {
-    return new Vector2(this.x - v.x, this.y - v.y);
+    return new Vector2(v1.x - v2.x, v1.y - v2.y);
   }
 
-  public multiply(val: number): Vector2
+  public times(val: number): Vector2
   {
     return new Vector2(this.x * val, this.y * val);
   }
