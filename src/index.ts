@@ -36,13 +36,15 @@ export class Vector2 {
     return new Vector2(this.x * val, this.y * val);
   }
 
+  // Positive angle is counter clockwise rotation
   public rotate(radians: number): Vector2 {
     return new Vector2(
-      Math.cos(radians * this.x) - Math.sin(radians * this.y),
-      Math.sin(radians * this.x) + Math.cos(radians * this.y),
+      this.x * Math.cos(radians) - this.y * Math.sin(radians),
+      this.x * Math.sin(radians) + this.y * Math.cos(radians),
     );
   }
 
+  // Positive angle is counter clockwise rotation
   public rotateDegrees(degrees: number): Vector2 {
     return this.rotate((degrees / 180) * Math.PI);
   }
