@@ -48,5 +48,9 @@ export class Vector2 {
   public rotateDegrees(degrees: number): Vector2 {
     return this.rotate((degrees / 180) * Math.PI);
   }
+
+  public rotate90Clockwise(): Vector2 {
+    return new Vector2(this.y, -this.x);
+  }
 }
 
